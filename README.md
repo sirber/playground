@@ -1,7 +1,8 @@
-# playground
+# Playground
 
 Little project to play with different technologies and stay up to date.
+When possible, unit tests will be provided.
 
-## Test code
+## Experiments
 
-- Count Repetition
+- Count Repetition (JS)
