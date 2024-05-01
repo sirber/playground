@@ -9,6 +9,11 @@ When possible, unit tests will be provided.
 
 - Install nodejs and npm: https://nodejs.org/en/download
 
+## PHP
+
+- Install php and composer
+- run: make install
+
 ## Experiments
 
-- Count Repetition (JS)
+- Count Repetition (JS, PHP)
