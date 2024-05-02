@@ -16,4 +16,6 @@ When possible, unit tests will be provided.
 
 ## Experiments
 
-- Count Repetition (JS, PHP)
+- Count Repetition (JS, PHP, Go)
+
+Count the number of repetitions. For exemple, [1, 2, 2, 3, 3, 3], we have 3 repetitions.
