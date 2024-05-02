@@ -1,4 +1,4 @@
-.PHONY=run test
+.PHONY: run test
 
 run:
 	@node index.js
