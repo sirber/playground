@@ -9,8 +9,9 @@ class CountRepetition
     $map = [];
   
     foreach($source as $number) {
-      if (isset($map[$number])) {
-        $map[$number] = $map[$number] + 1;
+      $repetition = $map[$number]; 
+      if (isset($repetition)) {
+        $map[$number] = $repetition + 1;
       } else {
         $map[$number] = 0;
       }

@@ -14,6 +14,10 @@ When possible, unit tests will be provided.
 - Install php and composer
 - run: make install
 
+## Go
+
+- Install gi:
+
 ## Experiments
 
 - Count Repetition (JS, PHP, Go)
