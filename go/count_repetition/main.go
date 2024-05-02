@@ -8,7 +8,7 @@ func main() {
 
 func countRepetition(source []int) int {
 	var (
-		repetitions = make(map[int]int)
+		repetitions = map[int]int{}
 		count       = 0
 	)
 
