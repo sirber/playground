@@ -4,4 +4,4 @@ install:
 	composer install
 
 test:
-	./vendor/bin/phpunit tests
+	./vendor/bin/phpunit tests --display-warnings

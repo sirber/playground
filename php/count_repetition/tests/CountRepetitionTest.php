@@ -2,6 +2,8 @@
 use PHPUnit\Framework\TestCase;
 use App\CountRepetition;
 
+error_reporting(E_ALL);
+
 final class CountRepetitionTest extends TestCase
 {
   public function test1(): void 
@@ -13,7 +15,7 @@ final class CountRepetitionTest extends TestCase
     $result = CountRepetition::countRepetition($test);
 
     // Assert
-    $this->assertSame($result, 3);
+    $this->assertEquals($result, 3);
   }
   
   public function test2(): void 
@@ -25,7 +27,7 @@ final class CountRepetitionTest extends TestCase
     $result = CountRepetition::countRepetition($test);
 
     // Assert
-    $this->assertSame($result, 3);
+    $this->assertEquals($result, 3);
   }
   
   public function test3(): void 
@@ -37,6 +39,6 @@ final class CountRepetitionTest extends TestCase
     $result = CountRepetition::countRepetition($test);
 
     // Assert
-    $this->assertSame($result, 4);
+    $this->assertEquals($result, 4);
   }
 }

@@ -6,12 +6,11 @@ class CountRepetition
 {
   public static function countRepetition(Array $source): int 
   {
-    $map = [];
+    $map = array();
   
     foreach($source as $number) {
-      $repetition = $map[$number]; 
-      if (isset($repetition)) {
-        $map[$number] = $repetition + 1;
+      if (isset($map[$number])) {
+        $map[$number] = $map[$number] + 1;
       } else {
         $map[$number] = 0;
       }
