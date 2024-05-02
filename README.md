@@ -9,16 +9,16 @@ When possible, unit tests will be provided.
 
 - Install nodejs and npm: https://nodejs.org/en/download
 
-## PHP
+### PHP
 
 - Install php and composer
 - run: make install
 
-## Go
+### Go
 
 https://go.dev/doc/install
 
-## dotNet
+### dotNet
 
 https://dotnet.microsoft.com/en-us/download
 
