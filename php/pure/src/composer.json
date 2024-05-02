@@ -1,0 +1,10 @@
+{
+  "name": "sirber/pure",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "private/"
+    }
+  },
+  "require": {}
+}
