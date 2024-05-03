@@ -4,12 +4,12 @@ namespace App\Service;
 
 class Session
 {
-  public static function get(string $key)
+  public static function get(string $key): mixed
   {
     return $_SESSION[$key];
   }
 
-  public static function set(string $key, $value)
+  public static function set(string $key, mixed $value): void
   {
     $_SESSION[$key] = $value;
   }
