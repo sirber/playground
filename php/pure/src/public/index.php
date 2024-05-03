@@ -3,13 +3,22 @@
 require_once __DIR__ . '/../private/bootstrap.php';
 
 $request = $_SERVER["REQUEST_URI"];
-switch ($request) {
+$parts = explode('/', $request);
+$endpoint = $parts[1];
+$id = isset($parts[2]) ? $parts[2] : null;
+
+switch ('/' . $endpoint) {
   case '/':
     phpinfo();
     break;
 
   case '/users':
-    echo "users";
+    if ($id) {
+      echo "users id: " . $id;
+    } else {
+      echo "users";
+    }
+
     break;
 
   default:
