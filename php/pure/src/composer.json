@@ -6,5 +6,7 @@
       "App\\": "private/"
     }
   },
-  "require": {}
+  "require": {
+    "twig/twig": "^3.9"
+  }
 }
