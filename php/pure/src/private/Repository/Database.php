@@ -2,13 +2,19 @@
 
 namespace App\Repository;
 
+use PDOException;
+
 abstract class Database
 {
   private $db;
 
   public function __construct()
   {
-    $this->db = new \PDO($_ENV['PDO_DB_STRING'], $_ENV['PDO_DB_USER'], $_ENV['PDO_DB_PASS']);
+    try {
+      $this->db = new \PDO($_ENV['PDO_DB_STRING'], $_ENV['PDO_DB_USER'], $_ENV['PDO_DB_PASS']);
+    } catch (PDOException $e) {
+      die($e->getMessage());
+    }
   }
 
   public function query(string $query): array
