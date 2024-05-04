@@ -12,7 +12,7 @@ class Template
     $this->twig = new \Twig\Environment($loader);
   }
 
-  public function render(string $file, array $options): string
+  public function render(string $file, array $options = []): string
   {
     return $this->twig->render($file, $options);
   }
