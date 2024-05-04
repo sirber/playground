@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/../private/bootstrap.php';
 
+use App\Controller\UserController;
+
 $request = $_SERVER["REQUEST_URI"];
 $parts = explode('/', $request);
 $endpoint = $parts[1];
@@ -13,10 +15,12 @@ switch ('/' . $endpoint) {
     break;
 
   case '/users':
+    $c = new UserController();
+
     if ($id) {
       echo "users id: " . $id;
     } else {
-      echo "users";
+      echo $c->getUsers();
     }
 
     break;
