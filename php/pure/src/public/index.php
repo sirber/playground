@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../private/bootstrap.php';
 
+use App\Controller\HomeController;
 use App\Controller\UserController;
 
 $request = $_SERVER["REQUEST_URI"];
@@ -11,7 +12,8 @@ $id = isset($parts[2]) ? $parts[2] : null;
 
 switch ('/' . $endpoint) {
   case '/':
-    phpinfo();
+    $c = new HomeController();
+    echo $c->getHome();
     break;
 
   case '/users':
@@ -22,7 +24,6 @@ switch ('/' . $endpoint) {
     } else {
       echo $c->getUsers();
     }
-
     break;
 
   default:
