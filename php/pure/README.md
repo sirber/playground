@@ -5,7 +5,7 @@ Little project to build a simple MCV back-end.
 ## Features
 
 - Routing
-- Database
+- Database (pdo)
   - Migrations
   - Repository pattern
 - Template engine (twig)
