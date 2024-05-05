@@ -22,8 +22,12 @@ https://go.dev/doc/install
 
 https://dotnet.microsoft.com/en-us/download
 
+## Rust
+
+install `rust` and `cargo`
+
 ## Experiments
 
-- Count Repetition (JS, PHP, C#, go, python)
+- Count Repetition (JS, PHP, C#, go, python, rust)
 
 Count the number of repetitions. For exemple, [1, 2, 2, 3, 3, 3], we have 3 repetitions.
