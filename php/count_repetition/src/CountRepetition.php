@@ -4,23 +4,18 @@ namespace App;
 
 class CountRepetition
 {
-  public static function countRepetition(Array $source): int 
+  public static function countRepetition(array $source): int
   {
     $map = array();
-  
-    foreach($source as $number) {
+
+    foreach ($source as $number) {
       if (isset($map[$number])) {
         $map[$number] = $map[$number] + 1;
       } else {
         $map[$number] = 0;
       }
     }
-  
-    $count = 0;
-    foreach($map as $repetition) {
-      $count += $repetition;
-    }
-  
-    return $count;
+
+    return array_sum($map);
   }
 }
