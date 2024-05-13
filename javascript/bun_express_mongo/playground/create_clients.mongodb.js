@@ -9,11 +9,13 @@
 // For more documentation on playgrounds please refer to
 // https://www.mongodb.com/docs/mongodb-vscode/playgrounds/
 
+const mongoose = require("mongoose");
+
 // Select the database to use.
 use('test');
 
 // Insert a few documents into the sales collection.
 db.getCollection('clients').insertMany([
-  { firstName: "Bob", lastName: "Roger", email: "bob@roger.com" }
+  { userId: new mongoose.Types.ObjectId() ,firstName: "Bob", lastName: "Roger", email: "bob@roger.com" }
 ]);
 
