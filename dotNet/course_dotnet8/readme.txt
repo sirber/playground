@@ -10,5 +10,6 @@ ex5: conversion string et int
 ex6: if / else
 ex7: jeu: nombre mystère
 ex8: for
-ex9: while
-ex10: jeu: nombre mystère (foreach)
+ex9: jeu: nombre mystère (while)
+ex10: foreach
+ex11: try / catch
