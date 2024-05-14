@@ -13,3 +13,6 @@ ex8: for
 ex9: jeu: nombre mystère + while
 ex10: jeu: nombre mystère + foreach
 ex11: jeu: nombre mystère + try / catch
+
+Module 2: Les classes (POO)
+ex1: Calculatrice
