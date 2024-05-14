@@ -15,5 +15,7 @@ ex10: jeu: nombre mystère + foreach
 ex11: jeu: nombre mystère + try / catch
 
 Module 2: Les classes (POO)
-ex1: class Calculatrice
-ex2: use Calculatrice
+ex1: créer une classe Calculatrice
+ex2: app: utiliser Calculatrice
+ex3: rajouter des propriétés
+ex4: rajouter un constructeur
