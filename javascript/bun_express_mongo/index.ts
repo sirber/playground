@@ -1,12 +1,9 @@
-import express, { type Express, type Request, type Response } from "express";
+// Config
 import dotenv from "dotenv";
-import mongoose from "mongoose";
-
-import Client from "./models/client";
-
 dotenv.config();
 
 // Database
+import mongoose from "mongoose";
 const mongoUri = process.env.MONGO_URI;
 if (!mongoUri) {
   throw new Error("MongoDB configuration not found");
@@ -16,6 +13,7 @@ mongoose.connect(mongoUri).then(() => {
 });
 
 // Express
+import express, { type Express, type Request, type Response } from "express";
 const app: Express = express();
 const port = process.env.PORT || 3000;
 
@@ -23,11 +21,9 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");
 });
 
-app.get("/clients", async (req: Request, res: Response) => {
-  const clients = await Client.find();
-
-  res.json(clients);
-});
+// - Routes
+import clientRoutes from "./routes/clients";
+app.use("/clients", clientRoutes);
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
