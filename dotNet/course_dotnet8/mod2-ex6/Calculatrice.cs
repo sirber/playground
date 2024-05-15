@@ -4,36 +4,37 @@ namespace mod2_ex6;
 
 public class Calculatrice
 {
-  public int Resultat { get; set; }
+  public int Resultat => Operation.Resultat;
+  public Operation Operation { get; }
 
-  public Calculatrice()
+  public Calculatrice(Operation operation)
   {
-    Resultat = 0;
+    Operation = operation;
   }
 
-  public void Executer(Operation operation)
+  public void Executer()
   {
-    if (operation is Addidion add)
+    // Could be just Operation.Executer();
+
+    if (Operation is Addidion add)
     {
       add.Executer();
     }
-    else if (operation is Soustraction sub)
+    else if (Operation is Soustraction sub)
     {
       sub.Executer();
     }
-    else if (operation is Division div)
+    else if (Operation is Division div)
     {
       div.Executer();
     }
-    else if (operation is Multiplication mul)
+    else if (Operation is Multiplication mul)
     {
       mul.Executer();
     }
-    else if (operation is Modulo mod)
+    else if (Operation is Modulo mod)
     {
       mod.Executer();
     }
-
-    Resultat = operation.Resultat;
   }
 }
