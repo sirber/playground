@@ -19,3 +19,4 @@ ex1: créer une classe Calculatrice
 ex2: app: utiliser Calculatrice
 ex3: rajouter des propriétés
 ex4: rajouter un constructeur
+ex5: rajouter l'héritage
