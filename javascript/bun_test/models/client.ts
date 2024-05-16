@@ -1,15 +1,22 @@
 import mongoose from "mongoose";
 
 const clientSchema = new mongoose.Schema({
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
+  id: {
+    type: String,
+    unique: true,
     index: true,
+    required: true,
+  },
+  userId: {
+    type: String,
+    index: true,
+    required: true,
   },
   firstName: String,
   lastName: String,
   email: {
     type: String,
+    unique: true,
     index: true,
   },
 });
