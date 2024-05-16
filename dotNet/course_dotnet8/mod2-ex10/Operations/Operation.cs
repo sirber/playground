@@ -14,9 +14,4 @@ abstract public class Operation : IOperation
   }
 
   abstract public void Executer();
-
-  public override string ToString()
-  {
-    return $"{Nb1} + {Nb2} = {Resultat}";
-  }
 }

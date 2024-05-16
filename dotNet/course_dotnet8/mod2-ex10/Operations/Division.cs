@@ -17,4 +17,9 @@ public class Division : Operation
 
     Resultat = Nb1 / Nb2;
   }
+
+  public override string ToString()
+  {
+    return $"{Nb1} / {Nb2} = {Resultat}";
+  }
 }
