@@ -5,10 +5,10 @@ export async function connectDb(mongoUri: string) {
   return mongoose
     .connect(mongoUri)
     .then(() => {
-      console.log(`[${getNow()}] Database is connected!`);
+      console.log(`[${getNow()}] Database: connected!`);
     })
     .catch((error) => {
-      console.error(`[${getNow()}] Database could not connected!`);
+      console.error(`[${getNow()}] Database: could not connected!`);
       throw error;
     });
 }

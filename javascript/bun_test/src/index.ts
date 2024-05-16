@@ -70,6 +70,6 @@ app.use(
 
 // App
 app.listen(port, () => {
-  log(`Server is running at http://localhost:${port}`);
-  log(`Environment is: ${getEnv()}`);
+  log(`Server: running at http://localhost:${port}`);
+  log(`Environment: ${getEnv()}`);
 });
