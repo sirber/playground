@@ -2,8 +2,8 @@
 
 abstract public class Operation : IOperation
 {
-  public int Nb1 { get; }
-  public int Nb2 { get; }
+  protected int Nb1 { get; }
+  protected int Nb2 { get; }
 
   public int Resultat { get; set; }
 

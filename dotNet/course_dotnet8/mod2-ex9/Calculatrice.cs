@@ -5,9 +5,9 @@ using mod2_ex9.Operations;
 public class Calculatrice
 {
   public int Resultat => Operation.Resultat;
-  private Operation Operation { get; }
+  private IOperation Operation { get; }
 
-  public Calculatrice(Operation operation)
+  public Calculatrice(IOperation operation)
   {
     Operation = operation;
   }
