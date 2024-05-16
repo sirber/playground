@@ -52,8 +52,8 @@ import {
   router as clientsRouter,
   name as clientsRoute,
 } from "./routes/client.route";
-import { getEnv } from "./helpers/env";
-import { log, logAccess } from "./helpers/logger";
+import { getEnv } from "./helpers/env.helper";
+import { log, logAccess } from "./helpers/logger.helper";
 app.use("/" + clientsRoute, clientsRouter);
 
 app.all("*", Guards.NotFound());

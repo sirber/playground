@@ -1,4 +1,4 @@
-import { getNow } from "./date";
+import { getNow } from "./date.helper";
 
 export function log(message: string) {
   console.log(`[${getNow()}] ${message}`);

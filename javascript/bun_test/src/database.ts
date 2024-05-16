@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { getNow } from "./helpers/date";
+import { getNow } from "./helpers/date.helper";
 
 export async function connectDb(mongoUri: string) {
   return mongoose
