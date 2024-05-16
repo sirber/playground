@@ -58,7 +58,7 @@ app.use("/" + clientsRoute, clientsRouter);
 
 app.all("*", Guards.NotFound());
 
-// Error Handling
+// Error Handling and Logging
 app.use(
   errorHandler((error: Error, req: Request, res: Response) => {
     logAccess(
