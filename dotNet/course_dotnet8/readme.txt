@@ -21,3 +21,4 @@ ex3: rajouter des propriétés
 ex4: rajouter un constructeur
 ex5: rajouter l'héritage
 ex6: rajouter le polymorphisme et pattern maching
+ex7: classes et méthodes abstraites
