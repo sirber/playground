@@ -16,7 +16,7 @@ public class Calculatrice
   {
     // Could be just Operation.Executer();
 
-    if (Operation is Addidion add)
+    if (Operation is Addition add)
     {
       add.Executer();
     }

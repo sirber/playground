@@ -3,7 +3,7 @@
 int nb1 = 6;
 int nb2 = 8;
 
-Addidion add = new(nb1, nb2);
+Addition add = new(nb1, nb2);
 add.Executer();
 Console.WriteLine(add.Resultat);
 

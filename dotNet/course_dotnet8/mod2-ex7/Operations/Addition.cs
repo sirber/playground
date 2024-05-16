@@ -1,8 +1,8 @@
 ﻿namespace mod2_ex7.Operations;
 
-public class Addidion : Operation
+public class Addition : Operation
 {
-  public Addidion(int nb1, int nb2)
+  public Addition(int nb1, int nb2)
     : base(nb1, nb2)
   {
   }
