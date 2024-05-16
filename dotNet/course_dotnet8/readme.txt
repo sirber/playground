@@ -24,3 +24,4 @@ ex6: rajouter le polymorphisme et pattern matching
 ex7: rajouter classes et méthodes abstraites
 ex8: rajouter portée
 ex9: rajouter interface pour Operation
+ex10: rajouter static (pratique)
