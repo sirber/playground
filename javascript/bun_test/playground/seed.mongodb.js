@@ -1,6 +1,8 @@
 /* global use, db */
 
-const { v4 } = require('uuid');
+var mongoose = require('mongoose');
+var getObjectId = () => new mongoose.Types.ObjectId();
+
 const { faker } = require('@faker-js/faker');
 
 function getRandomElement(array) {
@@ -19,7 +21,7 @@ db.createCollection('clients');
 function getUsers(howMany = 10) {
   function getUser() {
     return {
-      _id: v4(), 
+      _id: getObjectId(), 
       firstName: faker.person.firstName(), 
       lastName: faker.person.lastName(), 
       email: faker.internet.email(), 
@@ -39,7 +41,7 @@ function getUsers(howMany = 10) {
 function getClients(userIds, howMany = 40) {
   function getClient() {
     return {
-      _id: v4(), 
+      _id: getObjectId(), 
       userId: getRandomElement(userIds),
       firstName: faker.person.firstName(), 
       lastName: faker.person.lastName(), 
@@ -63,5 +65,4 @@ db.users.insertMany(users);
 
 // Clients
 const clients = getClients(users.map(u => u._id), 10);
-console.log(clients.map(c => c._id));
 db.clients.insertMany(clients);

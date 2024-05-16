@@ -32,7 +32,7 @@ app.get("/", (req: Request, res: Response) => {
 import {
   router as clientsRouter,
   name as clientsRoute,
-} from "./routes/clients";
+} from "./routes/client.route";
 app.use("/" + clientsRoute, clientsRouter);
 
 app.listen(port, () => {

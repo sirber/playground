@@ -1,10 +1,11 @@
 import { Router, type Request, type Response } from "express";
-import Client from "../models/client";
+import { ClientService } from "../services/client.service";
 
 export const name = "clients";
 export const router = Router();
 
+export const clientService = new ClientService();
+
 router.get("/", async (req: Request, res: Response) => {
-  const clients = await Client.find();
-  res.json(clients);
+  res.json(await clientService.getClients());
 });

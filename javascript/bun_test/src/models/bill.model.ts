@@ -1,24 +1,12 @@
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
-  _id: {
-    type: String,
-    unique: true,
-    index: true,
-    required: true,
-  },
   name: String,
   price: Number,
   quantity: Number,
 });
 
 const paymentSchema = new mongoose.Schema({
-  _id: {
-    type: String,
-    unique: true,
-    index: true,
-    required: true,
-  },
   amount: Number,
   createdAt: Date,
   updatedAt: Date,
@@ -26,14 +14,8 @@ const paymentSchema = new mongoose.Schema({
 });
 
 const billSchema = new mongoose.Schema({
-  _id: {
-    type: String,
-    unique: true,
-    index: true,
-    required: true,
-  },
   userId: {
-    type: String,
+    type: mongoose.Types.ObjectId,
     index: true,
     required: true,
   },
