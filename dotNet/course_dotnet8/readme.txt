@@ -20,5 +20,6 @@ ex2: app: utiliser Calculatrice
 ex3: rajouter des propriétés
 ex4: rajouter un constructeur
 ex5: rajouter l'héritage
-ex6: rajouter le polymorphisme et pattern maching
-ex7: classes et méthodes abstraites
+ex6: rajouter le polymorphisme et pattern matching
+ex7: rajouter classes et méthodes abstraites
+ex8: rajouter portée
