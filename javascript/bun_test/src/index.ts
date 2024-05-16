@@ -1,27 +1,28 @@
 // Config
-import dotenv from "dotenv";
-dotenv.config();
+import { mongoUri } from "./config";
 
 // Database
-import mongoose from "mongoose";
-const mongoUri = process.env.MONGO_URI;
-if (!mongoUri) {
-  throw new Error("MongoDB configuration not found");
-}
-mongoose
-  .connect(mongoUri)
-  .then(() => {
-    console.log("[database]: Database is connected!");
-  })
-  .catch((error) => {
-    console.error("[database]: Database could not connected!");
-    throw error;
-  });
+import { connectDb } from "./database";
+await connectDb(mongoUri);
 
 // Express
 import express, { type Express, type Request, type Response } from "express";
+import session from "express-session";
+import MongoStore from "connect-mongo";
+
 const app: Express = express();
 const port = process.env.PORT || 3000;
+
+app.use(
+  session({
+    store: MongoStore.create({
+      mongoUrl: mongoUri,
+    }),
+    secret: process.env.secret || "dev",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");

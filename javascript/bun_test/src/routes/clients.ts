@@ -6,6 +6,5 @@ export const router = Router();
 
 router.get("/", async (req: Request, res: Response) => {
   const clients = await Client.find();
-
   res.json(clients);
 });

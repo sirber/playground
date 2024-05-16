@@ -1,21 +1,25 @@
 {
-  "name": "bun_express_mongo",
+  "name": "bun_test",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/express": "^4.17.21",
+    "@types/uuid": "^9.0.8"
   },
   "scripts": {
-    "dev": "bun run --watch -i index.ts"
+    "dev": "bun run --watch -i ./src/index.ts",
+    "build": "docker build . -t bun_test"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "@types/express": "^4.17.21",
-    "@types/uuid": "^9.0.8",
+    "@types/express-session": "^1.18.0",
+    "connect-mongo": "^5.1.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
     "mongoose": "^8.3.4",
     "uuid": "^9.0.1"
   }
