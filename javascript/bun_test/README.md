@@ -1,0 +1,19 @@
+# Bun Test
+
+Bun Test with:
+
+- ExpressJS
+- MongoDB 7
+- Redis
+
+To install dependencies:
+
+```bash
+bun install
+```
+
+To run:
+
+```bash
+bun run dev
+```
