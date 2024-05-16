@@ -1,4 +1,4 @@
-// Config
+// Config and Helpers
 import { mongoUri } from "./config";
 
 // Database
@@ -6,13 +6,20 @@ import { connectDb } from "./database";
 await connectDb(mongoUri);
 
 // Express
-import express, { type Express, type Request, type Response } from "express";
+import express, {
+  type Express,
+  type Request,
+  type Response,
+  type NextFunction,
+} from "express";
+import errorHandler, { Guards } from "errors-express";
 import session from "express-session";
 import MongoStore from "connect-mongo";
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
 
+// Middlewares
 app.use(
   session({
     store: MongoStore.create({
@@ -24,17 +31,40 @@ app.use(
   })
 );
 
+app.use((req: Request, res: Response, next: NextFunction) => {
+  logAccess(`${req.method} ${req.url}`);
+  next();
+  logAccess(`${req.method} ${req.url}; <- ${res.statusCode}`);
+});
+
+// Routes
 app.get("/", (req: Request, res: Response) => {
   res.send("Express + TypeScript Server");
 });
 
-// - Routes
+app.get("/error", (req: Request, res: Response, next: NextFunction) => {
+  throw new Error("error");
+});
+
 import {
   router as clientsRouter,
   name as clientsRoute,
 } from "./routes/client.route";
+import { getEnv } from "./helpers/env";
+import { log, logAccess } from "./helpers/logger";
 app.use("/" + clientsRoute, clientsRouter);
 
+app.all("*", Guards.NotFound());
+
+// Error Handling
+app.use(
+  errorHandler((error: Error, req: Request, res: Response) => {
+    logAccess(`${req.method} ${req.url}; error: ${error.message}`, req.ip);
+  })
+);
+
+// App
 app.listen(port, () => {
-  console.log(`[server]: Server is running at http://localhost:${port}`);
+  log(`Server is running at http://localhost:${port}`);
+  log(`Environment is: ${getEnv()}`);
 });

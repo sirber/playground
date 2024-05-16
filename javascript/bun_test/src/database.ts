@@ -1,13 +1,14 @@
 import mongoose from "mongoose";
+import { getNow } from "./helpers/date";
 
 export async function connectDb(mongoUri: string) {
   return mongoose
     .connect(mongoUri)
     .then(() => {
-      console.log("[database]: Database is connected!");
+      console.log(`[${getNow()}] Database is connected!`);
     })
     .catch((error) => {
-      console.error("[database]: Database could not connected!");
+      console.error(`[${getNow()}] Database could not connected!`);
       throw error;
     });
 }
