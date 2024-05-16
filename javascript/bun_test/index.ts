@@ -28,8 +28,11 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 // - Routes
-import clientRoutes from "./routes/clients";
-app.use("/clients", clientRoutes);
+import {
+  router as clientsRouter,
+  name as clientsRoute,
+} from "./routes/clients";
+app.use("/" + clientsRoute, clientsRouter);
 
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
