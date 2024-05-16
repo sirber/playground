@@ -32,9 +32,11 @@ app.use(
 );
 
 app.use((req: Request, res: Response, next: NextFunction) => {
-  logAccess(`${req.method} ${req.url}`);
   next();
-  logAccess(`${req.method} ${req.url}; <- ${res.statusCode}`);
+
+  if (res.statusCode >= 200 && res.statusCode < 400) {
+    logAccess(`${req.method} ${req.url} status:${res.statusCode}`);
+  }
 });
 
 // Routes
@@ -59,7 +61,10 @@ app.all("*", Guards.NotFound());
 // Error Handling
 app.use(
   errorHandler((error: Error, req: Request, res: Response) => {
-    logAccess(`${req.method} ${req.url}; error: ${error.message}`, req.ip);
+    logAccess(
+      `${req.method} ${req.url} status:${res.statusCode} ${error.message}`,
+      req.ip
+    );
   })
 );
 
