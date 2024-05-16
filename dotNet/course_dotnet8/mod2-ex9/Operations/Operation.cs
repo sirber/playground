@@ -1,9 +1,9 @@
-﻿namespace mod2_ex8.Operations;
+﻿namespace mod2_ex9.Operations;
 
-abstract public class Operation
+abstract public class Operation : IOperation
 {
-  protected int Nb1;
-  protected int Nb2;
+  public int Nb1 { get; }
+  public int Nb2 { get; }
 
   public int Resultat { get; set; }
 

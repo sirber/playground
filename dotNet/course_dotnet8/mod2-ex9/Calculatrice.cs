@@ -1,6 +1,6 @@
-﻿namespace mod2_ex8;
+﻿namespace mod2_ex9;
 
-using mod2_ex7.Operations;
+using mod2_ex9.Operations;
 
 public class Calculatrice
 {

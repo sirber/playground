@@ -1,4 +1,4 @@
-﻿namespace mod2_ex8.Operations;
+﻿namespace mod2_ex9.Operations;
 
 public class Multiplication : Operation
 {
