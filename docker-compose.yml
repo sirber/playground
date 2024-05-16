@@ -14,7 +14,7 @@ services:
       - mysql_data:/var/lib/mysql
 
   mongodb:
-    image: mongo
+    image: mongo:7
     container_name: mongodb
     restart: unless-stopped
     ports:

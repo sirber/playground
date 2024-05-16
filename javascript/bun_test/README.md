@@ -1,4 +1,10 @@
-# bun_express_mongo
+# Bun Test
+
+Bun Test with:
+
+- ExpressJS
+- MongoDB 7
+- Redis
 
 To install dependencies:
 
