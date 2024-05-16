@@ -5,7 +5,7 @@ abstract public class Operation : IOperation
   protected int Nb1 { get; }
   protected int Nb2 { get; }
 
-  public int Resultat { get; set; }
+  public int Resultat { get; protected set; }
 
   public Operation(int nb1, int nb2)
   {

@@ -2,7 +2,7 @@
 
 public interface IOperation
 {
-  int Resultat { get; set; }
+  int Resultat { get; }
 
   void Executer();
 }
