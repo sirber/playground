@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const clientSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   id: {
     type: String,
     unique: true,
@@ -22,4 +22,4 @@ const clientSchema = new mongoose.Schema({
   deletedAt: Date,
 });
 
-export default mongoose.model("user", clientSchema);
+export default mongoose.model("user", userSchema);
