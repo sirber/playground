@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
-  id: {
+  _id: {
     type: String,
     unique: true,
     index: true,
@@ -13,7 +13,7 @@ const productSchema = new mongoose.Schema({
 });
 
 const paymentSchema = new mongoose.Schema({
-  id: {
+  _id: {
     type: String,
     unique: true,
     index: true,
@@ -26,9 +26,14 @@ const paymentSchema = new mongoose.Schema({
 });
 
 const billSchema = new mongoose.Schema({
-  id: {
+  _id: {
     type: String,
     unique: true,
+    index: true,
+    required: true,
+  },
+  userId: {
+    type: String,
     index: true,
     required: true,
   },

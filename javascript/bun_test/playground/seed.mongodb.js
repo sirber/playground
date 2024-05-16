@@ -10,14 +10,16 @@ function getRandomElement(array) {
 
 // Cleanup
 use('test');
-db.getCollection('users').deleteMany({});
-db.getCollection('clients').deleteMany({});
+db.users.drop();
+db.clients.drop();
+db.createCollection('users');
+db.createCollection('clients');
 
 // Factory
 function getUsers(howMany = 10) {
   function getUser() {
     return {
-      id: v4(), 
+      _id: v4(), 
       firstName: faker.person.firstName(), 
       lastName: faker.person.lastName(), 
       email: faker.internet.email(), 
@@ -37,7 +39,7 @@ function getUsers(howMany = 10) {
 function getClients(userIds, howMany = 40) {
   function getClient() {
     return {
-      id: v4(), 
+      _id: v4(), 
       userId: getRandomElement(userIds),
       firstName: faker.person.firstName(), 
       lastName: faker.person.lastName(), 
@@ -60,5 +62,6 @@ const users = getUsers(4);
 db.users.insertMany(users);
 
 // Clients
-const clients = getClients(users.map(u => u.id), 40);
+const clients = getClients(users.map(u => u._id), 10);
+console.log(clients.map(c => c._id));
 db.clients.insertMany(clients);

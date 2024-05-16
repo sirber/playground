@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const clientSchema = new mongoose.Schema({
-  id: {
+  _id: {
     type: String,
     unique: true,
     index: true,
@@ -19,6 +19,9 @@ const clientSchema = new mongoose.Schema({
     unique: true,
     index: true,
   },
+  createdAt: Date,
+  updatedAt: Date,
+  deletedAt: Date,
 });
 
 export default mongoose.model("client", clientSchema);
