@@ -8,9 +8,15 @@ const mongoUri = process.env.MONGO_URI;
 if (!mongoUri) {
   throw new Error("MongoDB configuration not found");
 }
-mongoose.connect(mongoUri).then(() => {
-  console.log("[database]: Database is connected!");
-});
+mongoose
+  .connect(mongoUri)
+  .then(() => {
+    console.log("[database]: Database is connected!");
+  })
+  .catch((error) => {
+    console.error("[database]: Database could not connected!");
+    throw error;
+  });
 
 // Express
 import express, { type Express, type Request, type Response } from "express";
