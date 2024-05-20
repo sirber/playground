@@ -30,3 +30,4 @@ Module 3: Extras
 ex1: null check
 ex2: type nullable
 ex3: System.Object, dans Calculatrice, rajouter .ToString() sur le opérations
+ex4: comparer deux objects
