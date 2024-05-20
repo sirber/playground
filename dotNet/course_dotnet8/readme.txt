@@ -25,3 +25,6 @@ ex7: rajouter classes et méthodes abstraites
 ex8: rajouter portée
 ex9: rajouter interface pour Operation
 ex10: rajouter static (pratique)
+
+Module 3: Extras
+ex1: null check
