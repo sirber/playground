@@ -28,3 +28,4 @@ ex10: rajouter static (pratique)
 
 Module 3: Extras
 ex1: null check
+ex2: nullable
