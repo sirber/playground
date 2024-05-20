@@ -28,4 +28,5 @@ ex10: rajouter static (pratique)
 
 Module 3: Extras
 ex1: null check
-ex2: nullable
+ex2: type nullable
+ex3: System.Object, dans Calculatrice, rajouter .ToString() sur le opérations
