@@ -3,13 +3,12 @@
 public class Pendu
 {
   private int NbEssai { get; set; }
-  private int NbEssaiMax { get; set; }
+  private const int NbEssaiMax = 7;
   private string Mot { get; set; }
   private List<char> Essais;
 
   public Pendu(string mot)
   {
-    NbEssaiMax = 7;
     Essais = new List<char>();
 
     Mot = mot;
