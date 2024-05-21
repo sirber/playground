@@ -9,7 +9,7 @@ try
 catch (MonException e)
 when (e.Message is not null)
 {
-  Console.WriteLine("MonException catched!");
+  Console.WriteLine("MonException catched with message!");
   Console.WriteLine(e.Message);
 }
 catch (MonException)

@@ -37,3 +37,4 @@ ex7: lever une exception personnalisée
 ex8: try / catch avancé
 
 Module 4: Jeu du pendu
+pendu: TP1
