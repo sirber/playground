@@ -33,7 +33,7 @@ ex3: System.Object, dans Calculatrice, rajouter .ToString() sur le opérations
 ex4: comparer deux objects
 ex5: instruction switch (deja fait, voir mod3-ex4/Program.cs)
 ex6: expression switch
-ex7: lever une exception
+ex7: lever une exception personnalisée
 ex8: try / catch avancé
 
 Module 4: Jeu du pendu
