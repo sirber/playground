@@ -4,11 +4,12 @@ using System.Text;
 
 Console.WriteLine("Chat Client");
 
+Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+IPEndPoint endPoint = new IPEndPoint(IPAddress.Loopback, 2345);
+
 try
 {
   // Connecting
-  Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-  IPEndPoint endPoint = new IPEndPoint(IPAddress.Loopback, 2345);
   socket.Connect(endPoint);
 
   // Sending
@@ -30,4 +31,11 @@ try
 catch (Exception ex)
 {
   Console.WriteLine("Client error: " + ex.Message);
+}
+finally
+{
+  if (socket.Connected)
+  {
+    socket.Close();
+  }
 }

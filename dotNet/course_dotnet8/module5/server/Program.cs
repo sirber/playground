@@ -4,11 +4,11 @@ using System.Text;
 
 Console.WriteLine("Chat Server");
 
+Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 2345);
+
 try
 {
-  Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-  IPEndPoint endPoint = new IPEndPoint(IPAddress.Any, 2345);
-
   // Listen
   socket.Bind(endPoint);
   socket.Listen();
@@ -34,4 +34,12 @@ try
 catch (Exception ex)
 {
   Console.WriteLine("Erreur de serveur: " + ex.Message);
+}
+finally
+{
+  if (socket.Connected)
+  {
+    socket.Shutdown(SocketShutdown.Both);
+  }
+  socket.Close();
 }
