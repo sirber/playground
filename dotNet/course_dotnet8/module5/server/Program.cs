@@ -12,7 +12,15 @@ try
   // Listen
   socket.Bind(endPoint);
   socket.Listen();
+}
+catch
+{
+  Console.WriteLine("Could not listen.");
+  Environment.Exit(1);
+}
 
+try
+{
   // New connection from client
   Socket client = socket.Accept();
   Console.WriteLine("Connection réussie");
@@ -26,6 +34,11 @@ try
     {
       byte[] buffer = new byte[128];
       int nbBytes = client.Receive(buffer);
+      
+      if (nbBytes == 0) {
+        break;
+      }
+
       string message = Encoding.UTF8.GetString(buffer, 0, nbBytes);
       Console.WriteLine("Reçu: " + message);
     }
