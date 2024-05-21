@@ -38,3 +38,7 @@ ex8: try / catch avancé
 
 Module 4: Jeu du pendu
 pendu: TP1
+
+Module 5: Le réseau, avec un système de chat
+server: serveur
+tp2: client et serveur
