@@ -43,3 +43,6 @@ Module 5: Le réseau
 server: serveur de chat
 client: client de chat
 tp2: supporter plusieurs clients sur le serveur, le serveur envoie les messages des clients aux autres
+
+Module 6: LINQ
+ex1: IEnumerable<T>
