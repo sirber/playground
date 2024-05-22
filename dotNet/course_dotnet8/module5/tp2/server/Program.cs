@@ -24,7 +24,10 @@ catch
 while (true)
 {
   Socket clientSocket = socket.Accept();
-  Thread clientThread = new(ListenClient);
+  Thread clientThread = new(ListenClient)
+  {
+    IsBackground = true
+  };
   clientThread.Start(clientSocket);
 }
 
