@@ -47,3 +47,4 @@ tp2: supporter plusieurs clients sur le serveur, le serveur envoie les messages 
 Module 6: LINQ
 ex1: IEnumerable<T>
 ex2: Méthode d'extension
+ex3: Opérateur Select
