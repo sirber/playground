@@ -30,13 +30,28 @@ personnes.Add(new Personne()
 });
 
 // Select
-List<string> noms = personnes.Select(p => p.Nom).ToList();
+List<string> noms
+  = personnes.Select(p => p.Nom).ToList();
 foreach (var nom in noms)
 {
   Console.WriteLine("Nom: " + nom);
 }
 
 // Where
-List<Personne> personnesAvecDateNaissance = personnes
-  .Where(p => p.DateNaissance.HasValue).ToList();
+List<Personne> personnesAvecDateNaissance
+  = personnes.Where(p => p.DateNaissance.HasValue).ToList();
 Console.WriteLine("Personnes avec une date de naissance: " + personnesAvecDateNaissance.Count);
+
+// Any et All
+bool smallPerson = personnes.Any(p => p.TailleCm < 100);
+Console.WriteLine("On a une petite personne: " + smallPerson);
+
+bool allDateAnniversaire = personnes.All(p => p.DateNaissance.HasValue);
+Console.WriteLine("On a toutes les dates d'anniversaire: " + allDateAnniversaire);
+
+// Order By
+var orderedPersonnes = personnes.OrderBy(p => p.TailleCm).ToList();
+foreach (var personne in orderedPersonnes)
+{
+  Console.WriteLine($"Nom: {personne.Nom}, Taille: {personne.TailleCm}");
+}
