@@ -48,3 +48,5 @@ Module 6: LINQ
 ex1: IEnumerable<T>
 ex2: Méthode d'extension
 ex3: Opérateur Select
+
+Module 7: Sérialisation

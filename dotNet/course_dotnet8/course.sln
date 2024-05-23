@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mod6-ex2", "module6\mod6-ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mod6-ex3", "module6\mod6-ex3\mod6-ex3.csproj", "{0D880444-9C85-49B0-B0E9-8BE300887253}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "module7", "module7", "{0C5D2032-CF9D-4D5A-A67A-C56D641F65C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
