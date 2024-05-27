@@ -50,3 +50,4 @@ ex2: Méthode d'extension
 ex3: Opérateur Select
 
 Module 7: Sérialisation
+ex1: lire du XML
