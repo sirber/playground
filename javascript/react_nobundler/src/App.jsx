@@ -1,22 +1,10 @@
-import Hello from './Hello';
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    // Initialize state if needed
-    this.state = {
-      // your state properties here
-    };
-  }
-
-  // Define your component's render method
-  render() {
-    return (
+function App() {
+  return (
+    <div>
       <Hello />
-    );
-  }
+      <p>This is an app using React without bundling or compilation.</p>
+    </div>
+  );
 }
 
-// Render your component to the root element
-const rootElement = document.getElementById('app');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<App />, document.getElementById('app'));
